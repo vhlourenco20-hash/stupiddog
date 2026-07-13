@@ -59,9 +59,9 @@ else()
 endif(NOT COMPILER_IS_MSVC)
 
 # The version number.
-set(ANTIMICROX_MAJOR_VERSION 3)
-set(ANTIMICROX_MINOR_VERSION 6)
-set(ANTIMICROX_PATCH_VERSION 1)
+set(stupiddog_MAJOR_VERSION 3)
+set(stupiddog_ANTIMICROX_MINOR_VERSION 6)
+set(stupiddog_PATCH_VERSION 1)
 
 if(UNIX)
     option(WITH_X11 "Compile with support for X11." ON)
@@ -88,10 +88,10 @@ if(WITH_TESTS)
     message("Tests enabled")
 endif(WITH_TESTS)
 
-if(ANTIMICROX_PKG_VERSION)
-    message("This build will be marked as: ${ANTIMICROX_PKG_VERSION}")
-    add_compile_definitions(ANTIMICROX_PKG_VERSION="${ANTIMICROX_PKG_VERSION}")
-endif(ANTIMICROX_PKG_VERSION)
+if(stupiddog_PKG_VERSION)
+    message("This build will be marked as: ${stupiddog_PKG_VERSION}")
+    add_compile_definitions(stupiddog_PKG_VERSION="${stupiddog_PKG_VERSION}")
+endif(stupiddog_PKG_VERSION)
 
 if(CHECK_FOR_UPDATES)
     message("This build will check for updates using GitHub API.")
