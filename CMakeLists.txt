@@ -18,7 +18,7 @@
 
 
 cmake_minimum_required(VERSION 3.12)
-project(antimicrox)
+project(stupiddog)
 
 if(POLICY CMP0071)
     cmake_policy(SET CMP0071 NEW)
@@ -79,7 +79,7 @@ option(USE_QT6_BY_DEFAULT "Use Qt6 if available (if not available fallback to QT
 option(UPDATE_TRANSLATIONS "Call lupdate to update translation files from source." OFF)
 option(TRANS_REMOVE_OBSOLETE "Add -noobsolete option to lupdate command to get rid of old text entries" OFF)
 option(ATTACH_FAKE_CLASSES "Fake classes can be used in application to tests functionalities" OFF)
-option(ANTIMICROX_PKG_VERSION "Manually define version of package displayed in info tab" OFF)
+option(stupiddog_PKG_VERSION "Manually define version of package displayed in info tab" OFF)
 option(CHECK_FOR_UPDATES "Enable checking for updates using GitHub REST API." OFF)
 option(BUILD_DOCS "Build documentation" OFF)
 option(WITH_TESTS "Allow tests for classes" OFF)
@@ -127,9 +127,9 @@ endif(UNIX)
 # PLATFORM-INDEPENDENT FILES
 ###############################
 
-set(antimicrox_MAIN src/main.cpp)
+set(stupiddog_MAIN src/main.cpp)
 
-set(antimicrox_SOURCES
+set(stupiddog_SOURCES
         src/antimicrosettings.cpp
         src/antkeymapper.cpp
         src/applaunchhelper.cpp
@@ -260,7 +260,7 @@ set(antimicrox_SOURCES
         src/xmlconfigwriter.cpp
         )
 
-set(antimicrox_HEADERS
+set(stupiddog_HEADERS
         src/antimicrosettings.h
         src/antkeymapper.h
         src/applaunchhelper.h
@@ -396,16 +396,16 @@ set(antimicrox_HEADERS
         )
 
 if(ATTACH_FAKE_CLASSES)
-    LIST(APPEND antimicrox_SOURCES
+    LIST(APPEND stupiddog_SOURCES
             src/fakeclasses/xbox360wireless.cpp
             )
 
-    LIST(APPEND antimicrox_HEADERS
+    LIST(APPEND stupiddog_HEADERS
             src/fakeclasses/xbox360wireless.h
             )
 endif(ATTACH_FAKE_CLASSES)
 
-set(antimicrox_FORMS
+set(stupiddog_FORMS
         src/gui/aboutdialog.ui
         src/gui/addeditautoprofiledialog.ui
         src/gui/advancebuttondialog.ui
@@ -487,7 +487,7 @@ elseif(WIN32)
         src/eventhandlers/winsendinputeventhandler.h
         src/joykeyrepeathelper.h
     )
-    LIST(APPEND antimicrox_FORMS
+    LIST(APPEND stupiddog_FORMS
         src/gui/winappprofiletimerdialog.ui    
     )
 endif(UNIX)
