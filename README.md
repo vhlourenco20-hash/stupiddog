@@ -7,12 +7,12 @@
 5. [Command Line](#command-line) 
 6. [D-Bus](#d-bus)
 7. [Testing Under Linux](#testing-under-linux)
-8. [AntiMicroX Profiles](#antimicrox-profiles)
+8. [stupiddog Profiles](#antimicrox-profiles)
 9. [Support](#support)
 
 ## ❗Looking for a new maintainer❗
 
-Due to lack of time and shifting focus of its developer AntiMicroX is looking for a new maintainer willing to continue development.   
+Due to lack of time and shifting focus of its developer stupiddog is looking for a new maintainer willing to continue development.   
 For now, this app will have only limited support and will not get any new features (unless coded by external contributors).   
 [Link to discussion](https://github.com/AntiMicroX/antimicrox/discussions/1171)
 
