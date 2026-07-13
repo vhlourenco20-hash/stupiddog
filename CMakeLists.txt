@@ -127,7 +127,7 @@ endif(UNIX)
 # PLATFORM-INDEPENDENT FILES
 ###############################
 
-set(stupiddog_MAIN src/main.cpp)
+set(antimicro_MAIN src/main.cpp)
 
 set(stupiddog_SOURCES
         src/antimicrosettings.cpp
@@ -260,7 +260,7 @@ set(stupiddog_SOURCES
         src/xmlconfigwriter.cpp
         )
 
-set(stupiddog_HEADERS
+set(antimicro_HEADERS
         src/antimicrosettings.h
         src/antkeymapper.h
         src/applaunchhelper.h
@@ -396,7 +396,7 @@ set(stupiddog_HEADERS
         )
 
 if(ATTACH_FAKE_CLASSES)
-    LIST(APPEND stupiddog_SOURCES
+    LIST(APPEND antimicro_SOURCES
             src/fakeclasses/xbox360wireless.cpp
             )
 
@@ -405,7 +405,7 @@ if(ATTACH_FAKE_CLASSES)
             )
 endif(ATTACH_FAKE_CLASSES)
 
-set(stupiddog_FORMS
+set(antimicro_FORMS
         src/gui/aboutdialog.ui
         src/gui/addeditautoprofiledialog.ui
         src/gui/advancebuttondialog.ui
@@ -487,7 +487,7 @@ elseif(WIN32)
         src/eventhandlers/winsendinputeventhandler.h
         src/joykeyrepeathelper.h
     )
-    LIST(APPEND stupiddog_FORMS
+    LIST(APPEND antimicrox_FORMS
         src/gui/winappprofiletimerdialog.ui    
     )
 endif(UNIX)
@@ -897,8 +897,8 @@ if(WIN32 AND NOT UNIX)
     endif()
 endif()
 
-set(CPACK_PACKAGE_EXECUTABLES "antimicrox;AntiMicroX")
-set(CPACK_CREATE_DESKTOP_LINKS "antimicrox")
+set(CPACK_PACKAGE_EXECUTABLES "stupiddog;stupiddog")
+set(CPACK_CREATE_DESKTOP_LINKS "stupiddog")
 include(CPack)
 
 if(WIN32 AND NOT UNIX AND NOT PORTABLE_WIN)
