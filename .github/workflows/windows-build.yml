@@ -20,8 +20,14 @@ jobs:
         with:
           version: '6.6.3'
 
+      - name: Install SDL2
+        shell: powershell
+        run: |
+          vcpkg install sdl2:x64-windows
+          echo "CMAKE_TOOLCHAIN_FILE=$env:VCPKG_INSTALLATION_ROOT\scripts\buildsystems\vcpkg.cmake" >> $env:GITHUB_ENV
+
       - name: Configure
-        run: cmake -B build -S . -DCMAKE_BUILD_TYPE=Release
+        run: cmake -B build -S . -DCMAKE_BUILD_TYPE=Release -DCMAKE_TOOLCHAIN_FILE=$env:CMAKE_TOOLCHAIN_FILE
 
       - name: Build
         run: cmake --build build --config Release
